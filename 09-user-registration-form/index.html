@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Registration Form</title>
+
+    <style>
+      body {
+        background: #ccc;
+      }
+      .registration-form {
+        background: #cfdab7;
+        border: 1px solid #999;
+        width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      h1 {
+        color: #666;
+      }
+      .form-control {
+        width: 300px;
+        border: 1px solid green;
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="registration-form">
+      <h1>Registration Form</h1>
+      <form action="" method="post">
+        <p>
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name"
+          placeholder="John Doe"/>
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" name="email"
+          placeholder="john@somewhere.com"/>
+        </p>
+
+        <p>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password"
+          class="form-control" placeholder="*********"/>
+        </p>
+
+        <p>
+          <label for="Roles">Roles</label>
+          <select class="form-control">
+            <option value="admin" selected>Admin</option>
+            <option value="guest">Guest</option>
+          </select>
+        </p>
+
+        <p>
+          <label>Gender</label>
+          <input type="radio" name="gender" value="male" id="male-checkbox" checked>
+          <label for="male-checkbox">Male</label>
+          <input type="radio" name="gender" value="female" id="female-checkbox">
+          <label for="female-checkbox">Female</label>
+        </p>
+
+        <p>
+          <input type="checkbox" name="agreement" id="agreement" value="agree">
+          <label for="agreement">I accept terms & condition</label>
+        </p>
+
+        <p>
+          <input type="submit" value="Save" class="submit-button"/>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
