@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Prime Number</title>
+
+    <script type="text/javascript">
+      function testPrime(num) {
+        if(num == 1 || num == 2)
+          return true;
+
+        for(i=2; i<num/2; i++) {
+          if(num%i==0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      var num = 13;
+      console.log(testPrime(num));
+      if(testPrime(num)) {
+        document.write("<p>" + num + " is a prime number</p>");
+      } else {
+        document.write("<p>" + num + " is not a prime number</p>");
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
