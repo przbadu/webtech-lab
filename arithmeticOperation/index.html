@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+      function arithmeticOperation(a, b, operator) {
+        switch(operator) {
+          case "+":
+            document.write(a+b)
+            break;
+          case "-":
+            document.write(a-b)
+            break;
+          case "*":
+            document.write(a*b)
+            break;
+          case "/":
+            document.write(a/b)
+            break;
+          default:
+            document.write("invalid operator")
+            break;
+        }
+      }
+
+      var a = 5;
+      var b = 4;
+
+      arithmeticOperation(a, b, "/")
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

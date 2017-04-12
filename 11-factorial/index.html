@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Factorial Number</title>
+  <script>
+  //
+  // 0! = 1
+  // 1! = 1
+  // 2! = 2 (2 * 1)
+  // 3! = 6 (3 * 2 * 1)
+  // 4! = 24 ( 4 * 3 * 2 * 1 )
+  // 5! = 120 ( 5 * 4 * 3 * 2 * 1 )
+  // 6! = 720 ( 6 * 5 * 4 * 3 * 2 * 1 )
+  //
+  // Formulae:
+  //
+  // factorial(n) = 1 * 2 * 3 * ...... * n
+  //
+  // using for loop
+  //function factorial(n) {
+  //  var fact = 1;
+  //  for(i=1; i<=n; i++) {
+  //    fact *= i;
+  //  }
+  //  return fact;
+  //}
+
+  // using recursion
+  function factorial(n) {
+    if(n<=1) {
+      return 1;
+    }
+    return n * factorial(n-1);
+  }
+  document.write(factorial(5));
+  </script>
+</head>
+<body>
+</body>
+</html>

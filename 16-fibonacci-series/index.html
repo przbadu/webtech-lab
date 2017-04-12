@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fibonacci Series</title>
+
+    <script>
+      function fibonacci(num) {
+        // formula:
+        // F(n) = F(n-1) + F(n-2)
+
+        var a = 1;
+        var b = 0;
+        var temp;
+
+
+        while(num >= 0) {
+          temp = a;
+          a = a + b;
+          b = temp;
+
+          document.write(b + " ");
+
+          num--;
+        }
+      }
+
+      fibonacci(10);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
