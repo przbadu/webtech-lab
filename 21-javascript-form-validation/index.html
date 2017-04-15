@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form validation</title>
+  <script>
+    function validate() {
+      var firstName = document.getElementById('firstName').value;
+      var lastName = document.getElementById('lastName').value;
+      var email = document.getElementById('email').value;
+      var error = document.getElementById('error');
+
+      if(firstName === "") {
+        error.innerHTML = 'first name required';
+        return false;
+      } else if(lastName === "") {
+        error.innerHTML = 'last name required';
+        return false;
+      } else if(email === "") {
+        error.innerHTML = 'email required';
+        return false;
+      }
+
+      error.innerHTML = '';
+    }
+
+    window.onload = function() {
+      document.getElementById('saveMe').onclick = function(e) {
+        e.preventDefault();
+        validate();
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <p id="error" style="color: red;"></p>
+    <p><label for="firstName">First Name</label>
+      <input type="text" id="firstName" placeholder="first name"></p>
+
+    <p><label for="lastName">Last Name</label>
+      <input type="text" id="lastName" placeholder="first name"></p>
+
+    <p><label for="email">Email</label>
+      <input type="text" id="email" placeholder="first name"></p>
+
+    <input type="submit" id="saveMe">
+  </form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script src="jquery.js"></script>
+  <script>
+    $(document).on("click", "#submit", function(e) {
+      var firstName = $('#firstName').val();
+      var lastName = $('#lastName').val();
+      var email = $('#email').val();
+      var error = $('#error');
+
+      if(firstName === "") {
+        $(error).html('first name required')
+        return false;
+      } else if(lastName === "") {
+        $(error).html('last name required')
+        return false;
+      } else if(email === "") {
+        $(error).html('email required')
+        return false;
+      }
+
+      $(error).html('');
+    })
+  </script>
+</head>
+<body>
+  <form>
+    <p id="error" style="color: red;"></p>
+    <p><label for="firstName">First Name</label>
+      <input type="text" id="firstName" placeholder="first name"></p>
+
+    <p><label for="lastName">Last Name</label>
+      <input type="text" id="lastName" placeholder="first name"></p>
+
+    <p><label for="email">Email</label>
+      <input type="text" id="email" placeholder="first name"></p>
+
+    <input type="submit" id="submit">
+  </form>
+</body>
+</html>
