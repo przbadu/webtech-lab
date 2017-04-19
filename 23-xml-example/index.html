@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XML example</title>
+</head>
+<body>
+  <p id="title"></p>
+  <p id="author"></p>
+  <p id="year"></p>
+  <p id="price"></p>
+
+  <script>
+    var text, parser, xmlDoc;
+
+text = "<bookstore><book>" +
+  "<title>HTML black book</title>" +
+  "<author>Steven Holzner</author>" +
+  "<year>2005</year>" +
+  "<price>$20</price>" +
+"</book></bookstore>"
+
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(text, "text/xml");
+
+    document.getElementById('title').innerHTML =
+  xmlDoc.getElementsByTagName('title')[0].childNodes[0].nodeValue;
+
+    document.getElementById('author').innerHTML =
+  xmlDoc.getElementsByTagName('author')[0].childNodes[0].nodeValue;
+
+    document.getElementById('year').innerHTML =
+  xmlDoc.getElementsByTagName('year')[0].childNodes[0].nodeValue;
+
+    document.getElementById('price').innerHTML =
+  xmlDoc.getElementsByTagName('price')[0].childNodes[0].nodeValue;
+  </script>
+</body>
+</html>

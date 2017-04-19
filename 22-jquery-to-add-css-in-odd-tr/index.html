@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add color to alternate tr</title>
+  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('tr:odd').css('background', '#CCC');
+      $('tr:even').css('background', '#F1F1F1')
+    })
+  </script>
+</head>
+<body>
+  <table width="100%" border="1">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>22</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <td>Gita</td>
+      <td>12</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <td>Harry</td>
+      <td>15</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <td>Gary</td>
+      <td>42</td>
+      <td>Male</td>
+    </tr>
+  </table>
+</body>
+</html>
